@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>MySQL的备份与恢复 (mysqldump)</title>
+    <url>/2024/08/17/202408170839/</url>
+    <content><![CDATA[<h2 id="mysqldump-语法">mysqldump 语法</h2>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mysqldump [选项] 数据库名 [表名] &gt; 脚本.sql</span><br></pre></td></tr></table></figure>
+<h3 id="选项">选项</h3>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>缩写</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>--host</td>
+<td>-h</td>
+<td>服务器IP地址</td>
+</tr>
+<tr>
+<td>--port</td>
+<td>-P (大写)</td>
+<td>服务器端口号</td>
+</tr>
+<tr>
+<td>--password</td>
+<td>-p (小写)</td>
+<td>MySQL密码</td>
+</tr>
+<tr>
+<td>--databases</td>
+<td></td>
+<td>指定要备份的数据库</td>
+</tr>
+<tr>
+<td>--all-databases</td>
+<td></td>
+<td>备份MySQL服务器上的所有数据库</td>
+</tr>
+<tr>
+<td>--compact</td>
+<td></td>
+<td>压缩模式，产生更少的输出</td>
+</tr>
+<tr>
+<td>--comments</td>
+<td></td>
+<td>添加注释信息</td>
+</tr>
+<tr>
+<td>--complete-insert</td>
+<td></td>
+<td>输出完成的插入语句</td>
+</tr>
+<tr>
+<td>--lock-tables</td>
+<td></td>
+<td>备份前，锁定所有数据库表</td>
+</tr>
+<tr>
+<td>--no-create-db/–no-create-info</td>
+<td></td>
+<td>禁止生成创建数据库语句</td>
+</tr>
+<tr>
+<td>--force</td>
+<td></td>
+<td>当出现错误时仍然继续备份操作</td>
+</tr>
+<tr>
+<td>--default-character-set</td>
+<td></td>
+<td>指定默认字符集</td>
+</tr>
+<tr>
+<td>--add-locks</td>
+<td></td>
+<td>备份数据库表时锁定数据库表</td>
+</tr>
+</tbody>
+</table>
+<h3 id="示例">示例</h3>
+<p>如果 -p 选项没有指定密码，那么控制台会等待输入密码</p>
+<h4 id="备份所有数据库">备份所有数据库</h4>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mysqldump -uroot -p --all-databases &gt; all.sql</span><br></pre></td></tr></table></figure>
+<h4 id="备份指定数据库">备份指定数据库</h4>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mysqldump -uroot -p test &gt; test.sql</span><br></pre></td></tr></table></figure>
+<h4 id="备份指定数据库指定表-多个表以空格间隔">备份指定数据库指定表(多个表以空格间隔)</h4>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mysqldump -uroot -p test table1 table2 &gt; test.sql </span><br></pre></td></tr></table></figure>
+<h4 id="备份指定数据库排除某些表">备份指定数据库排除某些表</h4>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mysqldump -uroot -p test --ignore-table=test.table1 --ignore-table=test.table2 &gt; test.sql</span><br></pre></td></tr></table></figure>
+<h3 id="恢复命令">恢复命令</h3>
+<h4 id="命令行命令">命令行命令</h4>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">注：在导入备份数据库前，db_name如果没有，是需要创建的； 而且与db_name.sql中数据库名是一样的才可以导入。</span><br><span class="line">mysqladmin -uroot -p create db_name </span><br><span class="line">mysql -uroot -p db_name &lt; /backup/mysqldump/db_name.sql</span><br></pre></td></tr></table></figure>
+<h4 id="soure-方法">soure 方法</h4>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mysql &gt; use db_name</span><br><span class="line">mysql &gt; source /backup/db_name.sql</span><br></pre></td></tr></table></figure>
+<style>
+    table th:nth-child(2){
+        width: 5rem;
+    }
+</style>]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>SQL</tag>
+        <tag>MySQL</tag>
+        <tag>备份</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我的第一篇博客</title>
+    <url>/2024/08/16/202408162041/</url>
+    <content><![CDATA[<p>这是我的第一篇博客，我以后会在这里分享一些技术，生活或记录学习状况。</p>
+<p>同时我也会吸取一些建议或意见，进行修正。</p>
+]]></content>
+      <categories>
+        <category>分享</category>
+      </categories>
+      <tags>
+        <tag>记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Centos7 的安装与配置 - 1</title>
+    <url>/2024/08/18/202408181002/</url>
+    <content><![CDATA[<h3 id="下载镜像">下载镜像</h3>
+<p>以下内容仅按照我的配置写的，如有不足评论一下。</p>
+<p>首先下载Centos7的镜像，这里我用的 <a href="https://mirrors.aliyun.com/centos/">阿里云的镜像</a></p>
+<p><img src="1.png" alt=""></p>
+<p>进入 7.9.2009/isos/x86_64/，下载 <a href="https://mirrors.aliyun.com/centos/7.9.2009/isos/x86_64/CentOS-7-x86_64-NetInstall-2009.iso">CentOS-7-x86_64-NetInstall-2009.iso</a></p>
+<p><img src="2.png" alt=""></p>
+<p>如果打开只有一个 readme 文件，说明这个版本的镜像没有提供下载。</p>
+<p><img src="3.png" alt=""></p>
+<h3 id="安装">安装</h3>
+<p>首先打开 VMware，创建新的虚拟机，这里安装到虚拟机里面 (物理机应该也是一样的)</p>
+<p><img src="4.png" alt=""></p>
+<p>选择自定义(高级)，然后下一步</p>
+<p><img src="5.png" alt=""></p>
+<p><img src="6.png" alt=""></p>
+<p>这里选择稍后安装操作系统，然后下一步</p>
+<p><img src="7.png" alt=""></p>
+<p>这里选择Centos7 64位</p>
+<p><img src="8.png" alt=""></p>
+<p>这里可以给虚拟机起名字。</p>
+<p>位置选C盘以外的盘，因为最后生成的虚拟机文件比较大(只有一个C盘当我没说…)</p>
+<p><img src="9.png" alt=""></p>
+<p>这里可以设置虚拟机的处理器(不懂别瞎选，默认的就行)</p>
+<p><img src="10.png" alt=""></p>
+<p>这里设置内存(不懂别瞎选，默认的就行)</p>
+<p><img src="11.png" alt=""></p>
+<p>这里建议选默认的 使用网络地址转换(NAT)</p>
+<p><img src="12.png" alt=""></p>
+<p>后面的默认推荐就可以</p>
+<p><img src="13.png" alt=""><br>
+<img src="14.png" alt=""></p>
+<p>创建新虚拟磁盘，而后下一步</p>
+<p><img src="15.png" alt=""></p>
+<p>这里可以设置磁盘大小，也就是虚拟机的硬盘大小</p>
+<p>选 将虚拟磁盘存储为单个文件，而后下一步</p>
+<p><img src="16.png" alt=""><br>
+<img src="17.png" alt=""></p>
+<p>完成！</p>
+<p><img src="18.png" alt=""><br>
+<img src="19.png" alt=""></p>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>Centos7</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo 图片资源显示</title>
+    <url>/2024/08/18/202408181131/</url>
+    <content><![CDATA[<h3 id="安装-hexo-renderer-markdown-it">安装 hexo-renderer-markdown-it</h3>
+<p><a href="https://github.com/hexojs/hexo-renderer-markdown-it/">hexo-renderer-markdown-it官网</a></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 如果安装过 hexo-renderer-marked，就卸载</span><br><span class="line"></span><br><span class="line">npm un hexo-renderer-marked</span><br><span class="line"></span><br><span class="line">npm i hexo-renderer-markdown-it</span><br></pre></td></tr></table></figure>
+<h3 id="修改-config-yml">修改_config.yml</h3>
+<p>将 post_asset_folder 改为true</p>
+<p><img src="1.png" alt=""></p>
+<h3 id="重新生成静态文件，并运行">重新生成静态文件，并运行</h3>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean &amp; hexo g &amp; hexo server</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>bug</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Centos7 的安装与配置 - 2</title>
+    <url>/2024/08/18/202408181522/</url>
+    <content><![CDATA[<p>右键标签栏，点击设置</p>
+<p><img src="1.png" alt=""></p>
+<p>选择 CD/DVD，选择下载好的ISO镜像，点击确定</p>
+<p><img src="2.png" alt=""></p>
+<p>开机！</p>
+<p><img src="3.png" alt=""></p>
+<p>开机之后，用方向键选择 Install Centos7 选项，按回车确认</p>
+<p><img src="4.png" alt=""></p>
+<p>选择语言</p>
+<p><img src="5.png" alt=""></p>
+<p>下滑选择安装位置</p>
+<p><img src="6.png" alt=""></p>
+<p>不会配置的选下面的自动配置分区，而后点击完成</p>
+<p><img src="7.png" alt=""></p>
+<p>配置安装源</p>
+<p><img src="8.png" alt=""></p>
+<p>如果配置是灰色的话，就像这样，就是没有连接网络，需要先连一下网络</p>
+<p>点击完成回到刚才的页面</p>
+<p><img src="9.png" alt=""></p>
+<p>点击网络和主机名</p>
+<p><img src="10.png" alt=""><br>
+<img src="11.png" alt=""></p>
+<p>连接到网络后，再次配置安装源，将安装源设置为国内的。</p>
+<p><a href="http://mirrors.aliyun.com/centos/7/os/x86_64/">http://mirrors.aliyun.com/centos/7/os/x86_64/</a></p>
+<p><img src="12.png" alt=""></p>
+<p>软件选择</p>
+<p><img src="13.png" alt=""></p>
+<p>这里我选择的是最小安装，方便学习和记录</p>
+<p><img src="14.png" alt=""><br>
+<img src="15.png" alt=""></p>
+<p>在安装过程中可以根据需求来判断是否设置root密码或者创建用户</p>
+<p>我不需要创建用户，所以我没有创建</p>
+<p>漫长的等待……</p>
+<p><img src="16.png" alt=""></p>
+<p>Centos7！启动！！</p>
+<p><img src="17.png" alt=""></p>
+<p>输入你的用户名和密码</p>
+<p>没有创建用户的话就只有root用户</p>
+<p><img src="18.png" alt=""></p>
+<p>这样就装好了~</p>
+<p><img src="19.png" alt=""></p>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>Centos7</tag>
+      </tags>
+  </entry>
+</search>
