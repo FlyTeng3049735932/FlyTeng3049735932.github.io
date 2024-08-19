@@ -247,20 +247,20 @@
 </tr>
 </tbody>
 </table>
-<h3 id="示例">示例</h3>
+<h2 id="示例">示例</h2>
 <p>如果 -p 选项没有指定密码，那么控制台会等待输入密码</p>
-<h4 id="备份所有数据库">备份所有数据库</h4>
+<h3 id="备份所有数据库">备份所有数据库</h3>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqldump -uroot -p --all-databases &gt; all.sql</span><br></pre></td></tr></table></figure>
-<h4 id="备份指定数据库">备份指定数据库</h4>
+<h3 id="备份指定数据库">备份指定数据库</h3>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqldump -uroot -p test &gt; test.sql</span><br></pre></td></tr></table></figure>
-<h4 id="备份指定数据库指定表-多个表以空格间隔">备份指定数据库指定表(多个表以空格间隔)</h4>
+<h3 id="备份指定数据库指定表-多个表以空格间隔">备份指定数据库指定表(多个表以空格间隔)</h3>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqldump -uroot -p test table1 table2 &gt; test.sql </span><br></pre></td></tr></table></figure>
-<h4 id="备份指定数据库排除某些表">备份指定数据库排除某些表</h4>
+<h3 id="备份指定数据库排除某些表">备份指定数据库排除某些表</h3>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqldump -uroot -p test --ignore-table=test.table1 --ignore-table=test.table2 &gt; test.sql</span><br></pre></td></tr></table></figure>
-<h3 id="恢复命令">恢复命令</h3>
-<h4 id="命令行命令">命令行命令</h4>
+<h2 id="恢复命令">恢复命令</h2>
+<h3 id="命令行命令">命令行命令</h3>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">注：在导入备份数据库前，db_name如果没有，是需要创建的； 而且与db_name.sql中数据库名是一样的才可以导入。</span><br><span class="line">mysqladmin -uroot -p create db_name </span><br><span class="line">mysql -uroot -p db_name &lt; /backup/mysqldump/db_name.sql</span><br></pre></td></tr></table></figure>
-<h4 id="soure-方法">soure 方法</h4>
+<h3 id="soure-方法">soure 方法</h3>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql &gt; use db_name</span><br><span class="line">mysql &gt; source /backup/db_name.sql</span><br></pre></td></tr></table></figure>
 <style>
     table th:nth-child(2){
@@ -345,6 +345,10 @@
         </script> -->
 
     </div>
+    
+        <div class="side">
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#mysqldump-%E8%AF%AD%E6%B3%95"><span class="toc-number">1.</span> <span class="toc-text">mysqldump 语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%89%E9%A1%B9"><span class="toc-number">1.1.</span> <span class="toc-text">选项</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B"><span class="toc-number">2.</span> <span class="toc-text">示例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%87%E4%BB%BD%E6%89%80%E6%9C%89%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">2.1.</span> <span class="toc-text">备份所有数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%87%E4%BB%BD%E6%8C%87%E5%AE%9A%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">2.2.</span> <span class="toc-text">备份指定数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%87%E4%BB%BD%E6%8C%87%E5%AE%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8C%87%E5%AE%9A%E8%A1%A8-%E5%A4%9A%E4%B8%AA%E8%A1%A8%E4%BB%A5%E7%A9%BA%E6%A0%BC%E9%97%B4%E9%9A%94"><span class="toc-number">2.3.</span> <span class="toc-text">备份指定数据库指定表(多个表以空格间隔)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%87%E4%BB%BD%E6%8C%87%E5%AE%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8E%92%E9%99%A4%E6%9F%90%E4%BA%9B%E8%A1%A8"><span class="toc-number">2.4.</span> <span class="toc-text">备份指定数据库排除某些表</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%81%A2%E5%A4%8D%E5%91%BD%E4%BB%A4"><span class="toc-number">3.</span> <span class="toc-text">恢复命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%91%BD%E4%BB%A4"><span class="toc-number">3.1.</span> <span class="toc-text">命令行命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#soure-%E6%96%B9%E6%B3%95"><span class="toc-number">3.2.</span> <span class="toc-text">soure 方法</span></a></li></ol></li></ol>
+        </div>
     
 </div>
 

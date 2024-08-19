@@ -82,20 +82,20 @@
 </tr>
 </tbody>
 </table>
-<h3 id="示例">示例</h3>
+<h2 id="示例">示例</h2>
 <p>如果 -p 选项没有指定密码，那么控制台会等待输入密码</p>
-<h4 id="备份所有数据库">备份所有数据库</h4>
+<h3 id="备份所有数据库">备份所有数据库</h3>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mysqldump -uroot -p --all-databases &gt; all.sql</span><br></pre></td></tr></table></figure>
-<h4 id="备份指定数据库">备份指定数据库</h4>
+<h3 id="备份指定数据库">备份指定数据库</h3>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mysqldump -uroot -p test &gt; test.sql</span><br></pre></td></tr></table></figure>
-<h4 id="备份指定数据库指定表-多个表以空格间隔">备份指定数据库指定表(多个表以空格间隔)</h4>
+<h3 id="备份指定数据库指定表-多个表以空格间隔">备份指定数据库指定表(多个表以空格间隔)</h3>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mysqldump -uroot -p test table1 table2 &gt; test.sql </span><br></pre></td></tr></table></figure>
-<h4 id="备份指定数据库排除某些表">备份指定数据库排除某些表</h4>
+<h3 id="备份指定数据库排除某些表">备份指定数据库排除某些表</h3>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mysqldump -uroot -p test --ignore-table=test.table1 --ignore-table=test.table2 &gt; test.sql</span><br></pre></td></tr></table></figure>
-<h3 id="恢复命令">恢复命令</h3>
-<h4 id="命令行命令">命令行命令</h4>
+<h2 id="恢复命令">恢复命令</h2>
+<h3 id="命令行命令">命令行命令</h3>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">注：在导入备份数据库前，db_name如果没有，是需要创建的； 而且与db_name.sql中数据库名是一样的才可以导入。</span><br><span class="line">mysqladmin -uroot -p create db_name </span><br><span class="line">mysql -uroot -p db_name &lt; /backup/mysqldump/db_name.sql</span><br></pre></td></tr></table></figure>
-<h4 id="soure-方法">soure 方法</h4>
+<h3 id="soure-方法">soure 方法</h3>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mysql &gt; use db_name</span><br><span class="line">mysql &gt; source /backup/db_name.sql</span><br></pre></td></tr></table></figure>
 <style>
     table th:nth-child(2){
@@ -109,19 +109,6 @@
         <tag>SQL</tag>
         <tag>MySQL</tag>
         <tag>备份</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我的第一篇博客</title>
-    <url>/2024/08/16/202408162041/</url>
-    <content><![CDATA[<p>这是我的第一篇博客，我以后会在这里分享一些技术，生活或记录学习状况。</p>
-<p>同时我也会吸取一些建议或意见，进行修正。</p>
-]]></content>
-      <categories>
-        <category>分享</category>
-      </categories>
-      <tags>
-        <tag>记录</tag>
       </tags>
   </entry>
   <entry>
@@ -190,6 +177,19 @@
       </categories>
       <tags>
         <tag>bug</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我的第一篇博客</title>
+    <url>/2024/08/16/202408162041/</url>
+    <content><![CDATA[<p>这是我的第一篇博客，我以后会在这里分享一些技术，生活或记录学习状况。</p>
+<p>同时我也会吸取一些建议或意见，进行修正。</p>
+]]></content>
+      <categories>
+        <category>分享</category>
+      </categories>
+      <tags>
+        <tag>记录</tag>
       </tags>
   </entry>
   <entry>
