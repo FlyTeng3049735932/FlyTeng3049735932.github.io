@@ -112,7 +112,7 @@
         <div class="stuff">
             <span>八月 19, 2024</span>
             
-  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Centos7/" rel="tag">Centos7</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/config/" rel="tag">config</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/yum/" rel="tag">yum</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E9%85%8D%E7%BD%AE/" rel="tag">配置</a></li></ul>
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Centos7/" rel="tag">Centos7</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/config/" rel="tag">config</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/yum/" rel="tag">yum</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E9%85%8D%E7%BD%AE/" rel="tag">配置</a></li></ul>
 
 
         </div>
@@ -121,7 +121,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup</span><br></pre></td></tr></table></figure>
 <p>下载国内源配置文件(这里用的是阿里云的仓库)，并移动到源目录里</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo curl -O http://mirrors.aliyun.com/repo/Centos-7.repo</span><br><span class="line">sudo mv Centos-7.repo /etc/yum.repos.d/CentOS-Base.repo</span><br></pre></td></tr></table></figure>
-<p>清理 yum 缓存并刷新缓存</p>
+<p>刷新yum缓存</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo yum clean all</span><br><span class="line">sudo yum makecache fast</span><br></pre></td></tr></table></figure>
 <p>检查是否更换成功</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum repolist</span><br></pre></td></tr></table></figure>

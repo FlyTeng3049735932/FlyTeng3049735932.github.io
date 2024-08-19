@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://bestflyteng.github.io/2024/08/19/202408191233/</loc>
+    
+    <lastmod>2024-08-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://bestflyteng.github.io/2024/08/19/202408191114/</loc>
     
     <lastmod>2024-08-19</lastmod>
@@ -11,7 +20,7 @@
   </url>
   
   <url>
-    <loc>https://bestflyteng.github.io/2024/08/18/202408181522/</loc>
+    <loc>https://bestflyteng.github.io/2024/08/18/202408181002/</loc>
     
     <lastmod>2024-08-19</lastmod>
     
@@ -20,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://bestflyteng.github.io/2024/08/18/202408181002/</loc>
+    <loc>https://bestflyteng.github.io/2024/08/18/202408181522/</loc>
     
     <lastmod>2024-08-19</lastmod>
     
@@ -154,6 +163,20 @@
   </url>
   
   <url>
+    <loc>https://bestflyteng.github.io/tags/Linux/</loc>
+    <lastmod>2024-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://bestflyteng.github.io/tags/bug/</loc>
+    <lastmod>2024-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://bestflyteng.github.io/tags/%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2024-08-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -175,7 +198,7 @@
   </url>
   
   <url>
-    <loc>https://bestflyteng.github.io/tags/bug/</loc>
+    <loc>https://bestflyteng.github.io/tags/docker/</loc>
     <lastmod>2024-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -205,6 +228,13 @@
   </url>
   
   <url>
+    <loc>https://bestflyteng.github.io/categories/Hexo/</loc>
+    <lastmod>2024-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://bestflyteng.github.io/categories/%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2024-08-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -212,7 +242,21 @@
   </url>
   
   <url>
-    <loc>https://bestflyteng.github.io/categories/Hexo/</loc>
+    <loc>https://bestflyteng.github.io/categories/%E5%AE%89%E8%A3%85/</loc>
+    <lastmod>2024-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://bestflyteng.github.io/categories/%E5%AE%89%E8%A3%85/%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2024-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://bestflyteng.github.io/categories/%E5%AE%89%E8%A3%85/%E4%BD%BF%E7%94%A8/%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2024-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
