@@ -6,7 +6,7 @@
   <link href="https://bestflyteng.github.io/atom.xml" rel="self"/>
   
   <link href="https://bestflyteng.github.io/"/>
-  <updated>2024-08-19T02:20:16.651Z</updated>
+  <updated>2024-08-19T04:26:36.421Z</updated>
   <id>https://bestflyteng.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>换 yum 源</title>
+    <link href="https://bestflyteng.github.io/2024/08/19/202408191114/"/>
+    <id>https://bestflyteng.github.io/2024/08/19/202408191114/</id>
+    <published>2024-08-19T03:14:54.000Z</published>
+    <updated>2024-08-19T04:26:36.421Z</updated>
+    
+    <content type="html"><![CDATA[<p>备份原有源配置文件</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup</span><br></pre></td></tr></table></figure><p>下载国内源配置文件(这里用的是阿里云的仓库)，并移动到源目录里</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo curl -O http://mirrors.aliyun.com/repo/Centos-7.repo</span><br><span class="line">sudo mv Centos-7.repo /etc/yum.repos.d/CentOS-Base.repo</span><br></pre></td></tr></table></figure><p>清理 yum 缓存并刷新缓存</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo yum clean all</span><br><span class="line">sudo yum makecache fast</span><br></pre></td></tr></table></figure><p>检查是否更换成功</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum repolist</span><br></pre></td></tr></table></figure><p>更新软件包</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y update</span><br></pre></td></tr></table></figure><p>至此，换源完成~</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;备份原有源配置文件&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=</summary>
+      
+    
+    
+    
+    <category term="配置" scheme="https://bestflyteng.github.io/categories/%E9%85%8D%E7%BD%AE/"/>
+    
+    
+    <category term="Centos7" scheme="https://bestflyteng.github.io/tags/Centos7/"/>
+    
+    <category term="配置" scheme="https://bestflyteng.github.io/tags/%E9%85%8D%E7%BD%AE/"/>
+    
+    <category term="config" scheme="https://bestflyteng.github.io/tags/config/"/>
+    
+    <category term="yum" scheme="https://bestflyteng.github.io/tags/yum/"/>
+    
+  </entry>
   
   <entry>
     <title>Centos7 的安装与配置 - 2</title>
