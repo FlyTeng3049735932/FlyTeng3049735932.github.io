@@ -162,24 +162,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo 图片资源显示</title>
-    <url>/2024/08/18/202408181131/</url>
-    <content><![CDATA[<h3 id="安装-hexo-renderer-markdown-it">安装 hexo-renderer-markdown-it</h3>
-<p><a href="https://github.com/hexojs/hexo-renderer-markdown-it/">hexo-renderer-markdown-it官网</a></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 如果安装过 hexo-renderer-marked，就卸载</span><br><span class="line"></span><br><span class="line">npm un hexo-renderer-marked</span><br><span class="line"></span><br><span class="line">npm i hexo-renderer-markdown-it</span><br></pre></td></tr></table></figure>
-<h3 id="修改-config-yml">修改_config.yml</h3>
-<p>将 post_asset_folder 改为true</p>
-<p><img src="1.png" alt=""></p>
-<h3 id="重新生成静态文件，并运行">重新生成静态文件，并运行</h3>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean &amp; hexo g &amp; hexo server</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>bug</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>我的第一篇博客</title>
     <url>/2024/08/16/202408162041/</url>
     <content><![CDATA[<p>这是我的第一篇博客，我以后会在这里分享一些技术，生活或记录学习状况。</p>
@@ -242,6 +224,24 @@
       </categories>
       <tags>
         <tag>Centos7</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo 图片资源显示</title>
+    <url>/2024/08/18/202408181131/</url>
+    <content><![CDATA[<h3 id="安装-hexo-renderer-markdown-it">安装 hexo-renderer-markdown-it</h3>
+<p><a href="https://github.com/hexojs/hexo-renderer-markdown-it/">hexo-renderer-markdown-it官网</a></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 如果安装过 hexo-renderer-marked，就卸载</span><br><span class="line"></span><br><span class="line">npm un hexo-renderer-marked</span><br><span class="line"></span><br><span class="line">npm i hexo-renderer-markdown-it</span><br></pre></td></tr></table></figure>
+<h3 id="修改-config-yml">修改_config.yml</h3>
+<p>将 post_asset_folder 改为true</p>
+<p><img src="1.png" alt=""></p>
+<h3 id="重新生成静态文件，并运行">重新生成静态文件，并运行</h3>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean &amp; hexo g &amp; hexo server</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>bug</tag>
       </tags>
   </entry>
 </search>
