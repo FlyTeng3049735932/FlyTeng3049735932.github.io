@@ -176,59 +176,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Centos7 的安装与配置 - 2</title>
-    <url>/2024/08/18/202408181522/</url>
-    <content><![CDATA[<p>右键标签栏，点击设置</p>
-<p><img src="1.png" alt=""></p>
-<p>选择 CD/DVD，选择下载好的ISO镜像，点击确定</p>
-<p><img src="2.png" alt=""></p>
-<p>开机！</p>
-<p><img src="3.png" alt=""></p>
-<p>开机之后，用方向键选择 Install Centos7 选项，按回车确认</p>
-<p><img src="4.png" alt=""></p>
-<p>选择语言</p>
-<p><img src="5.png" alt=""></p>
-<p>下滑选择安装位置</p>
-<p><img src="6.png" alt=""></p>
-<p>不会配置的选下面的自动配置分区，而后点击完成</p>
-<p><img src="7.png" alt=""></p>
-<p>配置安装源</p>
-<p><img src="8.png" alt=""></p>
-<p>如果配置是灰色的话，就像这样，就是没有连接网络，需要先连一下网络</p>
-<p>点击完成回到刚才的页面</p>
-<p><img src="9.png" alt=""></p>
-<p>点击网络和主机名</p>
-<p><img src="10.png" alt=""><br>
-<img src="11.png" alt=""></p>
-<p>连接到网络后，再次配置安装源，将安装源设置为国内的。</p>
-<p><a href="http://mirrors.aliyun.com/centos/7/os/x86_64/">http://mirrors.aliyun.com/centos/7/os/x86_64/</a></p>
-<p><img src="12.png" alt=""></p>
-<p>软件选择</p>
-<p><img src="13.png" alt=""></p>
-<p>这里我选择的是最小安装，方便学习和记录</p>
-<p><img src="14.png" alt=""><br>
-<img src="15.png" alt=""></p>
-<p>在安装过程中可以根据需求来判断是否设置root密码或者创建用户</p>
-<p>我不需要创建用户，所以我没有创建</p>
-<p>漫长的等待……</p>
-<p><img src="16.png" alt=""></p>
-<p>Centos7！启动！！</p>
-<p><img src="17.png" alt=""></p>
-<p>输入你的用户名和密码</p>
-<p>没有创建用户的话就只有root用户</p>
-<p><img src="18.png" alt=""></p>
-<p>这样就装好了~</p>
-<p><img src="19.png" alt=""></p>
-]]></content>
-      <categories>
-        <category>操作系统</category>
-      </categories>
-      <tags>
-        <tag>Centos7</tag>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo 图片资源显示</title>
     <url>/2024/08/18/202408181131/</url>
     <content><![CDATA[<h3 id="安装-hexo-renderer-markdown-it">安装 hexo-renderer-markdown-it</h3>
@@ -244,32 +191,6 @@
       </categories>
       <tags>
         <tag>bug</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>换 yum 源</title>
-    <url>/2024/08/19/202408191114/</url>
-    <content><![CDATA[<p>备份原有源配置文件</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup</span><br></pre></td></tr></table></figure>
-<p>下载国内源配置文件(这里用的是阿里云的仓库)，并移动到源目录里</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo curl -O http://mirrors.aliyun.com/repo/Centos-7.repo</span><br><span class="line">sudo mv Centos-7.repo /etc/yum.repos.d/CentOS-Base.repo</span><br></pre></td></tr></table></figure>
-<p>刷新yum缓存</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum clean all</span><br><span class="line">sudo yum makecache fast</span><br></pre></td></tr></table></figure>
-<p>检查是否更换成功</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum repolist</span><br></pre></td></tr></table></figure>
-<p>更新软件包</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum -y update</span><br></pre></td></tr></table></figure>
-<p>至此，换源完成~</p>
-]]></content>
-      <categories>
-        <category>配置</category>
-      </categories>
-      <tags>
-        <tag>Centos7</tag>
-        <tag>Linux</tag>
-        <tag>配置</tag>
-        <tag>config</tag>
-        <tag>yum</tag>
       </tags>
   </entry>
   <entry>
@@ -375,7 +296,7 @@
 <p>而后进入/etc/docker修改daemon.json，如果没有这个json文件就新建一个</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd /etc/docker</span><br><span class="line"># 查看有没有daemon.json文件</span><br><span class="line">ls</span><br><span class="line"># 如果没有就新建</span><br><span class="line">touch daemon.json</span><br></pre></td></tr></table></figure>
 <p>编辑daemon.json</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vi daemon.json</span><br><span class="line"># 添加以下配置</span><br><span class="line">&#123;</span><br><span class="line">  &quot;registry-mirrors&quot;:[</span><br><span class="line">        &quot;https://docker.1panel.live&quot;,</span><br><span class="line">        &quot;https://hub.rat.dev&quot;,</span><br><span class="line">        &quot;https://docker.registry.cyou&quot;,</span><br><span class="line">        &quot;https://docker-cf.registry.cyou&quot;,</span><br><span class="line">        &quot;https://dockercf.jsdelivr.fyi&quot;,</span><br><span class="line">        &quot;https://docker.jsdelivr.fyi&quot;,</span><br><span class="line">        &quot;https://dockertest.jsdelivr.fyi&quot;,</span><br><span class="line">        &quot;https://mirror.aliyuncs.com&quot;,</span><br><span class="line">        &quot;https://dockerproxy.com&quot;,</span><br><span class="line">        &quot;https://mirror.baidubce.com&quot;,</span><br><span class="line">        &quot;https://docker.m.daocloud.io&quot;,</span><br><span class="line">        &quot;https://docker.nju.edu.cn&quot;,</span><br><span class="line">        &quot;https://docker.mirrors.sjtug.sjtu.edu.cn&quot;,</span><br><span class="line">        &quot;https://docker.mirrors.ustc.edu.cn&quot;,</span><br><span class="line">        &quot;https://mirror.iscas.ac.cn&quot;,</span><br><span class="line">        &quot;https://docker.rainbond.cc&quot;,</span><br><span class="line">        &quot;https://dockerhub.icu&quot;,</span><br><span class="line">        &quot;https://hub.uuuadc.top&quot;,</span><br><span class="line">        &quot;https://docker.anyhub.us.kg&quot;,</span><br><span class="line">        &quot;https://dockerhub.jobcher.com&quot;,</span><br><span class="line">        &quot;https://docker.ckyl.me&quot;,</span><br><span class="line">        &quot;https://docker.awsl9527.cn&quot;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vi daemon.json</span><br><span class="line"># 添加以下配置</span><br><span class="line">&#123;</span><br><span class="line">  &quot;registry-mirrors&quot;:[</span><br><span class="line">        &quot;https://docker.1panel.live&quot;,</span><br><span class="line">        &quot;https://hub.rat.dev&quot;,</span><br><span class="line">        &quot;https://docker.registry.cyou&quot;,</span><br><span class="line">        &quot;https://docker-cf.registry.cyou&quot;,</span><br><span class="line">        &quot;https://dockercf.jsdelivr.fyi&quot;,</span><br><span class="line">        &quot;https://docker.jsdelivr.fyi&quot;,</span><br><span class="line">        &quot;https://dockertest.jsdelivr.fyi&quot;,</span><br><span class="line">        &quot;https://docker.nju.edu.cn&quot;,</span><br><span class="line">        &quot;https://docker.mirrors.sjtug.sjtu.edu.cn&quot;,</span><br><span class="line">        &quot;https://mirror.iscas.ac.cn&quot;,</span><br><span class="line">        &quot;https://docker.rainbond.cc&quot;,</span><br><span class="line">        &quot;https://dockerhub.icu&quot;,</span><br><span class="line">        &quot;https://hub.uuuadc.top&quot;,</span><br><span class="line">        &quot;https://docker.anyhub.us.kg&quot;,</span><br><span class="line">        &quot;https://docker.awsl9527.cn&quot;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>然后重启docker即可，上面的那些源有可能某些失效了，视情况绝对是否删除。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">service docker restart</span><br></pre></td></tr></table></figure>
 <h4 id="Job-for-docker-service-failed-because-start-of-the-service-was-attempted-too-often-See-“systemctl-status-docker-service”-and-“journalctl-xe”-for-details-To-force-a-start-use-“systemctl-reset-failed-docker-service”-followed-by-“systemctl-start-docker-service”-again">Job for docker.service failed because start of the service was attempted too often. See “systemctl status docker.service” and “journalctl -xe” for details. To force a start use “systemctl reset-failed docker.service” followed by “systemctl start docker.service” again.</h4>
@@ -396,6 +317,85 @@
         <tag>Centos7</tag>
         <tag>Linux</tag>
         <tag>docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Centos7 的安装与配置 - 2</title>
+    <url>/2024/08/18/202408181522/</url>
+    <content><![CDATA[<p>右键标签栏，点击设置</p>
+<p><img src="1.png" alt=""></p>
+<p>选择 CD/DVD，选择下载好的ISO镜像，点击确定</p>
+<p><img src="2.png" alt=""></p>
+<p>开机！</p>
+<p><img src="3.png" alt=""></p>
+<p>开机之后，用方向键选择 Install Centos7 选项，按回车确认</p>
+<p><img src="4.png" alt=""></p>
+<p>选择语言</p>
+<p><img src="5.png" alt=""></p>
+<p>下滑选择安装位置</p>
+<p><img src="6.png" alt=""></p>
+<p>不会配置的选下面的自动配置分区，而后点击完成</p>
+<p><img src="7.png" alt=""></p>
+<p>配置安装源</p>
+<p><img src="8.png" alt=""></p>
+<p>如果配置是灰色的话，就像这样，就是没有连接网络，需要先连一下网络</p>
+<p>点击完成回到刚才的页面</p>
+<p><img src="9.png" alt=""></p>
+<p>点击网络和主机名</p>
+<p><img src="10.png" alt=""><br>
+<img src="11.png" alt=""></p>
+<p>连接到网络后，再次配置安装源，将安装源设置为国内的。</p>
+<p><a href="http://mirrors.aliyun.com/centos/7/os/x86_64/">http://mirrors.aliyun.com/centos/7/os/x86_64/</a></p>
+<p><img src="12.png" alt=""></p>
+<p>软件选择</p>
+<p><img src="13.png" alt=""></p>
+<p>这里我选择的是最小安装，方便学习和记录</p>
+<p><img src="14.png" alt=""><br>
+<img src="15.png" alt=""></p>
+<p>在安装过程中可以根据需求来判断是否设置root密码或者创建用户</p>
+<p>我不需要创建用户，所以我没有创建</p>
+<p>漫长的等待……</p>
+<p><img src="16.png" alt=""></p>
+<p>Centos7！启动！！</p>
+<p><img src="17.png" alt=""></p>
+<p>输入你的用户名和密码</p>
+<p>没有创建用户的话就只有root用户</p>
+<p><img src="18.png" alt=""></p>
+<p>这样就装好了~</p>
+<p><img src="19.png" alt=""></p>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>Centos7</tag>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>换 yum 源</title>
+    <url>/2024/08/19/202408191114/</url>
+    <content><![CDATA[<p>备份原有源配置文件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup</span><br></pre></td></tr></table></figure>
+<p>下载国内源配置文件(这里用的是阿里云的仓库)，并移动到源目录里</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo curl -O http://mirrors.aliyun.com/repo/Centos-7.repo</span><br><span class="line">sudo mv Centos-7.repo /etc/yum.repos.d/CentOS-Base.repo</span><br></pre></td></tr></table></figure>
+<p>刷新yum缓存</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum clean all</span><br><span class="line">sudo yum makecache fast</span><br></pre></td></tr></table></figure>
+<p>检查是否更换成功</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum repolist</span><br></pre></td></tr></table></figure>
+<p>更新软件包</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum -y update</span><br></pre></td></tr></table></figure>
+<p>至此，换源完成~</p>
+]]></content>
+      <categories>
+        <category>配置</category>
+      </categories>
+      <tags>
+        <tag>Centos7</tag>
+        <tag>Linux</tag>
+        <tag>配置</tag>
+        <tag>config</tag>
+        <tag>yum</tag>
       </tags>
   </entry>
 </search>
