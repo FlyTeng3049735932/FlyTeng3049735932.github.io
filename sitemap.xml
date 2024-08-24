@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://bestflyteng.github.io/2024/08/24/202408240914/</loc>
+    <loc>https://bestflyteng.github.io/2024/08/19/202408191233/</loc>
     
     <lastmod>2024-08-24</lastmod>
     
@@ -11,9 +11,18 @@
   </url>
   
   <url>
-    <loc>https://bestflyteng.github.io/2024/08/19/202408191233/</loc>
+    <loc>https://bestflyteng.github.io/2024/08/18/202408181131/</loc>
     
-    <lastmod>2024-08-20</lastmod>
+    <lastmod>2024-08-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bestflyteng.github.io/2024/08/24/202408240914/</loc>
+    
+    <lastmod>2024-08-24</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -66,15 +75,6 @@
   
   <url>
     <loc>https://bestflyteng.github.io/about/index.html</loc>
-    
-    <lastmod>2024-08-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bestflyteng.github.io/2024/08/18/202408181131/</loc>
     
     <lastmod>2024-08-18</lastmod>
     
@@ -144,6 +144,20 @@
   </url>
   
   <url>
+    <loc>https://bestflyteng.github.io/tags/Centos7/</loc>
+    <lastmod>2024-08-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://bestflyteng.github.io/tags/Linux/</loc>
+    <lastmod>2024-08-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://bestflyteng.github.io/tags/SQL/</loc>
     <lastmod>2024-08-24</lastmod>
     <changefreq>weekly</changefreq>
@@ -159,20 +173,6 @@
   
   <url>
     <loc>https://bestflyteng.github.io/tags/%E5%A4%87%E4%BB%BD/</loc>
-    <lastmod>2024-08-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://bestflyteng.github.io/tags/Centos7/</loc>
-    <lastmod>2024-08-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://bestflyteng.github.io/tags/Linux/</loc>
     <lastmod>2024-08-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -230,14 +230,14 @@
   </url>
   
   <url>
-    <loc>https://bestflyteng.github.io/categories/MySQL/</loc>
+    <loc>https://bestflyteng.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2024-08-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://bestflyteng.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</loc>
+    <loc>https://bestflyteng.github.io/categories/MySQL/</loc>
     <lastmod>2024-08-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -265,6 +265,13 @@
   </url>
   
   <url>
+    <loc>https://bestflyteng.github.io/categories/python/</loc>
+    <lastmod>2024-08-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://bestflyteng.github.io/categories/%E5%AE%89%E8%A3%85/%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2024-08-24</lastmod>
     <changefreq>weekly</changefreq>
@@ -273,13 +280,6 @@
   
   <url>
     <loc>https://bestflyteng.github.io/categories/%E5%AE%89%E8%A3%85/%E4%BD%BF%E7%94%A8/%E9%85%8D%E7%BD%AE/</loc>
-    <lastmod>2024-08-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://bestflyteng.github.io/categories/python/</loc>
     <lastmod>2024-08-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
