@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://bestflyteng.github.io/2024/08/24/202408240914/</loc>
+    
+    <lastmod>2024-08-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://bestflyteng.github.io/2024/08/19/202408191233/</loc>
     
     <lastmod>2024-08-20</lastmod>
@@ -204,6 +213,13 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://bestflyteng.github.io/tags/python/</loc>
+    <lastmod>2024-08-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -257,6 +273,13 @@
   
   <url>
     <loc>https://bestflyteng.github.io/categories/%E5%AE%89%E8%A3%85/%E4%BD%BF%E7%94%A8/%E9%85%8D%E7%BD%AE/</loc>
+    <lastmod>2024-08-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://bestflyteng.github.io/categories/python/</loc>
     <lastmod>2024-08-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
